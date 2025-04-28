@@ -1,14 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mili.journalapp">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
 
     <application
-        android:icon="@mipmap/ic_launcher"
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="JournalApp"
         android:theme="@style/Theme.JournalApp">
 
@@ -23,10 +25,13 @@
         </provider>
 
 
-        <activity android:name=".ui.theme.AddEditNoteActivity" />
+        <activity
+            android:name=".ui.theme.AddEditNoteActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".ui.theme.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
